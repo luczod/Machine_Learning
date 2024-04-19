@@ -2,6 +2,7 @@
 
 # Importing the dataset
 dataset = read.csv('Social_Network_Ads.csv')
+# index start by 1
 dataset = dataset[3:5]
 
 # Encoding the target feature as factor
@@ -30,7 +31,8 @@ y_pred = knn(train = training_set[, -3],
 # Making the Confusion Matrix
 cm = table(test_set[, 3], y_pred)
 
-# Visualising the Training set results
+# Visualizing the Training set results
+# install.packages('ElemStatLearn')
 library(ElemStatLearn)
 set = training_set
 X1 = seq(min(set[, 1]) - 1, max(set[, 1]) + 1, by = 0.01)
@@ -46,7 +48,7 @@ contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
 points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'dodgerblue', 'salmon'))
 points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'dodgerblue3', 'salmon3'))
 
-# Visualising the Test set results
+# Visualizing the Test set results
 library(ElemStatLearn)
 set = test_set
 X1 = seq(min(set[, 1]) - 1, max(set[, 1]) + 1, by = 0.01)
