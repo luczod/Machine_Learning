@@ -1,0 +1,1 @@
+Clustering is similar to classification, but the basis is different. IN CLUSTERING YOU DON’T KNOW WHAT YOU ARE LOOKING FOR, and you are trying to identify some segments or clusters in your data. When you use clustering algorithms on your dataset, unexpected things can suddenly pop up like structures, clusters and groupings you would have never thought of otherwise.

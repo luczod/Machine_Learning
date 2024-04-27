@@ -3,6 +3,7 @@
 # Importing the dataset
 dataset = read.csv('mall.csv')
 X = dataset[4:5]
+View(X)
 
 # Using the elbow method to find the optimal number of clusters
 set.seed(6)
@@ -22,7 +23,7 @@ kmeans = kmeans(x = X,
                 iter.max = 300,
                 nstart = 10)
 
-# Visualising the clusters
+# Visualizing the clusters
 library(cluster)
 clusplot(x = X,
          clus = kmeans$cluster,
