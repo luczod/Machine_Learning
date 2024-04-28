@@ -3,10 +3,12 @@
 # Importing the dataset
 dataset = read.csv('mall.csv')
 X = dataset[4:5]
+View(X)
 
 # Using the dendrogram to find the optimal number of clusters
 dendrogram = hclust(d = dist(X, method = 'euclidean'),
                     method = 'ward.D')
+# Largest VERTICAL distance that we can make without crossing any other HORIZONTAL line.
 plot(dendrogram,
      main = paste('Dendrogram'),
      xlab = 'Customers',
@@ -17,7 +19,7 @@ hc = hclust(d = dist(X, method = 'euclidean'),
             method = 'ward.D')
 y_hc = cutree(hc, 5)
 
-# Visualising the clusters
+# Visualizing the clusters
 library(cluster)
 clusplot(x = X,
          clus = y_hc,
@@ -30,3 +32,4 @@ clusplot(x = X,
          main = paste('Clusters of customers'),
          xlab = 'Annual Income',
          ylab = 'Spending Score')
+
