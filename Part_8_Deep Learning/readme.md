@@ -24,3 +24,23 @@ Machine Learning it receives the data, executes the mathematical algorithm and o
 - ball roling / zig zaggy
 - Stochastic Descent (cost function is NOT CONVEX)
 - run one row at a time, find local minimum instead global minimum
+
+### CNN
+
+1. Convolution
+
+- Input Image + Feature Detector = Feature Map
+- Create many features maps to obtain one convolutrion layer
+- ReLu break linearity
+- Softmax & Cross-Entropy (Loss function)
+- Cross-Entropy use logarithm
+
+2. Max Pooling/downsampling
+
+- pooled feature map with max number in feature map
+
+3. Flattening
+
+- converts the matrix to a array
+
+4. Full Connection
