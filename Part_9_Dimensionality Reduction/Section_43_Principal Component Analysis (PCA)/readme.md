@@ -1,0 +1,8 @@
+- Noide filtering
+- Visualization
+- Feature Extraction
+- Stock market predictions
+- Gene data analysis
+- StatQuest channel
+- https://archive.ics.uci.edu/
+- https://setosa.io/
