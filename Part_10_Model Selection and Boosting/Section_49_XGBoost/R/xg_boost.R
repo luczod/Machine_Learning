@@ -21,9 +21,11 @@ training_set = subset(dataset, split == TRUE)
 test_set = subset(dataset, split == FALSE)
 
 # Fitting XGBoost to the Training set
+# training_set[-11] = all columns except the last
 # install.packages('xgboost')
 library(xgboost)
-classifier = xgboost(data = as.matrix(training_set[-11]), label = training_set$Exited, nrounds = 10)
+classifier = xgboost(data = as.matrix(training_set[-11]),label = training_set$Exited, nrounds = 10)
+
 
 # Predicting the Test set results
 y_pred = predict(classifier, newdata = as.matrix(test_set[-11]))
@@ -33,6 +35,7 @@ y_pred = (y_pred >= 0.5)
 cm = table(test_set[, 11], y_pred)
 
 # Applying k-Fold Cross Validation
+# train-rmse:0.297559 = error level
 # install.packages('caret')
 library(caret)
 folds = createFolds(dataset$Exited, k = 10)
