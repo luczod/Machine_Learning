@@ -29,18 +29,30 @@ Machine Learning it receives the data, executes the mathematical algorithm and o
 
 1. Convolution
 
-- Input Image + Feature Detector = Feature Map
-- Create many features maps to obtain one convolutrion layer
+- Input Image(matrix) \* Feature/filter Detector(matrix) = Feature/filter Map(matrix)
+- Column by column
+- Create MANY features maps to obtain one convolutional layer
 - ReLu break linearity
-- Softmax & Cross-Entropy (Loss function)
-- Cross-Entropy use logarithm
+- Softmax uses the $\hat{y}$ output value
+- Cross-Entropy (Loss function) > Mean Squared Error
+- Cross-Entropy (logarithm): It handles very small numbers better and is better for classification
 
-2. Max Pooling/downsampling
+2. Max Pooling/Downsampling
 
-- pooled feature map with max number in feature map
+- rotated image, distorted image
+- find the maximum value in a part(matrix) of the Feature map
+- pooled feature map(matrix) with max number in feature map
+- reduce the size and parameters
+- less information, but same features
+- There is min pooling, avegare pooling ...
 
 3. Flattening
 
-- converts the matrix to a array
+- converts the matrix to a array (one row)
 
 4. Full Connection
+
+- Input Image > Convolutional Layer, ReLu > Pooling Layer > flattening > ML
+- Backpropagation in all layers
+- The feature detectors are trained and adjusted in that same gradient decent process
+- Softmax & Cross-Entropy

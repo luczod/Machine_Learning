@@ -21,5 +21,5 @@
 
 - Overall global minimum rather than the local minimum
 - Adjust the weights after every single row, rather than doing everything together(Gradient Descent)
-- Ir's much lighter algotihm
+- Ir's much lighter algorithm
 - Stochastic method (random)
